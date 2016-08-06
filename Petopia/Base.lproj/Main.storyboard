@@ -3,9 +3,98 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Pet View Controller-->
+        <scene sceneID="PEh-pP-6Cz">
+            <objects>
+                <viewController id="jF3-3b-CpW" customClass="PetViewController" customModule="Petopia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yqy-SX-Bhg"/>
+                        <viewControllerLayoutGuide type="bottom" id="fwf-BY-hP7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yK6-oF-dVc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="iAd-VR-4J5">
+                                <rect key="frame" x="166" y="102" width="269" height="296"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="269" id="3TQ-ws-t6o"/>
+                                    <constraint firstAttribute="height" constant="296" id="sP8-3K-Ug8"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="bRa-Qv-ZgN" appends="YES" id="YhY-jd-Lhi"/>
+                                </connections>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TUf-Ay-b31">
+                                <rect key="frame" x="185" y="422" width="230" height="100"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pet Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JKZ-du-vOq">
+                                        <rect key="frame" x="0.0" y="0.0" width="230" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pet Type(e.g Cat, Bird, Dog, etc)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="olu-lf-9X7">
+                                        <rect key="frame" x="0.0" y="35" width="230" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pet Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qY8-vc-YUz">
+                                        <rect key="frame" x="0.0" y="70" width="230" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="28G-FX-18U"/>
+                                    <constraint firstAttribute="width" secondItem="TUf-Ay-b31" secondAttribute="height" multiplier="23:10" id="KER-hV-00Q"/>
+                                    <constraint firstAttribute="height" constant="100" id="kgZ-2r-tKD"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TUf-Ay-b31" firstAttribute="centerX" secondItem="yK6-oF-dVc" secondAttribute="centerX" id="0fz-OF-MZx"/>
+                            <constraint firstItem="iAd-VR-4J5" firstAttribute="centerX" secondItem="TUf-Ay-b31" secondAttribute="centerX" id="COs-3s-kBL"/>
+                            <constraint firstItem="iAd-VR-4J5" firstAttribute="top" secondItem="Yqy-SX-Bhg" secondAttribute="bottom" constant="38" id="Hn3-n1-rwd"/>
+                            <constraint firstItem="TUf-Ay-b31" firstAttribute="top" secondItem="iAd-VR-4J5" secondAttribute="bottom" constant="24" id="kaY-cv-F14"/>
+                            <constraint firstItem="iAd-VR-4J5" firstAttribute="centerX" secondItem="yK6-oF-dVc" secondAttribute="centerX" id="ncc-Mi-ncq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oJ4-gE-BdF">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="ryQ-hx-YBR">
+                            <connections>
+                                <action selector="cancel:" destination="jF3-3b-CpW" id="wCF-GP-Jb2"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="OLW-Gw-NaG">
+                            <connections>
+                                <segue destination="FjU-cx-5lL" kind="unwind" unwindAction="unwindToPetList:" id="r1P-J7-vaM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="descTextField" destination="qY8-vc-YUz" id="ylM-vm-fOt"/>
+                        <outlet property="nameTextField" destination="JKZ-du-vOq" id="I8t-WA-H6r"/>
+                        <outlet property="petPhotoImageVIew" destination="iAd-VR-4J5" id="YMH-2D-FwH"/>
+                        <outlet property="saveBarButton" destination="OLW-Gw-NaG" id="OpK-iX-EEG"/>
+                        <outlet property="typeTextField" destination="olu-lf-9X7" id="aAp-wR-2VP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CVb-kB-3SN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="FjU-cx-5lL" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="bRa-Qv-ZgN">
+                    <connections>
+                        <action selector="selectImagePicker:" destination="jF3-3b-CpW" id="jEp-E4-Fvu"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2011" y="-264"/>
+        </scene>
         <!--PETOPIA-->
         <scene sceneID="lu7-tz-bko">
             <objects>
@@ -77,11 +166,17 @@
                             <outlet property="delegate" destination="n8g-6c-kCQ" id="gwY-jX-NuY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="PETOPIA" id="eFS-Ij-AP6"/>
+                    <navigationItem key="navigationItem" title="PETOPIA" id="eFS-Ij-AP6">
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="4KS-Xa-59l">
+                            <connections>
+                                <segue destination="2we-mX-D2x" kind="show" identifier="AddItem" id="SVT-Xd-lmo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6kz-n3-obI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1267" y="468"/>
+            <point key="canvasLocation" x="1187" y="468"/>
         </scene>
         <!--Pet Detail Table View Controller-->
         <scene sceneID="hz5-hA-aPj">
@@ -229,8 +324,27 @@
             </objects>
             <point key="canvasLocation" x="455" y="468"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YUA-U5-Qgk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2we-mX-D2x" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yhg-qO-490">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jF3-3b-CpW" kind="relationship" relationship="rootViewController" id="59I-qy-nrx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OdB-Oy-xpW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1199" y="-264"/>
+        </scene>
     </scenes>
     <resources>
         <image name="GingerCat" width="391" height="600"/>
+        <image name="Image" width="540" height="540"/>
     </resources>
 </document>

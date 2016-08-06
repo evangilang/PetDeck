@@ -58,5 +58,14 @@ class PetTableViewController: UITableViewController {
         }
     }
     
+    @IBAction func unwindToPetList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.sourceViewController as? PetViewController, pet = sourceViewController.pet {
+            let newIndexPath = NSIndexPath(forRow: pets.count, inSection: 0)
+            pets.append(pet)
+            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+            
+        }
+    }
+    
     
 }
