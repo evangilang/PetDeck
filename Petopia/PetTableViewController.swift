@@ -11,6 +11,7 @@ import UIKit
 class PetTableViewController: UITableViewController {
     var pets = [Pet]()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadPets()
@@ -43,6 +44,18 @@ class PetTableViewController: UITableViewController {
         cell.petDescLabel.text = pet.petDesc
         cell.petPhotoImageView.image = pet.petPhoto
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "PetDetail" {
+            let petDetailTableViewController = segue.destinationViewController as! PetDetailTableViewController
+            if let selectedPetCell = sender as? PetTableViewCell {
+                let indexPath = tableView.indexPathForCell(selectedPetCell)!
+                let selectedPet = pets[indexPath.row]
+                petDetailTableViewController.pet = selectedPet
+                
+            }
+        }
     }
     
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0830F46F1D558984000130FA /* PetDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0830F46E1D558984000130FA /* PetDetailTableViewController.swift */; };
 		086E2A281D5449F600D751D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086E2A271D5449F600D751D8 /* AppDelegate.swift */; };
 		086E2A2D1D5449F600D751D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 086E2A2B1D5449F600D751D8 /* Main.storyboard */; };
 		086E2A2F1D5449F600D751D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 086E2A2E1D5449F600D751D8 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0830F46E1D558984000130FA /* PetDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetDetailTableViewController.swift; sourceTree = "<group>"; };
 		086E2A241D5449F600D751D8 /* Petopia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Petopia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		086E2A271D5449F600D751D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		086E2A2C1D5449F600D751D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				086E2A391D544F7F00D751D8 /* Pet.swift */,
 				086E2A3B1D546CC400D751D8 /* PetTableViewController.swift */,
 				086E2A3D1D546F3100D751D8 /* PetTableViewCell.swift */,
+				0830F46E1D558984000130FA /* PetDetailTableViewController.swift */,
 			);
 			path = Petopia;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				086E2A3A1D544F7F00D751D8 /* Pet.swift in Sources */,
+				0830F46F1D558984000130FA /* PetDetailTableViewController.swift in Sources */,
 				086E2A3C1D546CC400D751D8 /* PetTableViewController.swift in Sources */,
 				086E2A3E1D546F3100D751D8 /* PetTableViewCell.swift in Sources */,
 				086E2A281D5449F600D751D8 /* AppDelegate.swift in Sources */,
@@ -295,6 +299,7 @@
 				086E2A381D5449F600D751D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
