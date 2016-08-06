@@ -157,7 +157,7 @@
                                     <outlet property="petNameLabel" destination="tdF-si-z2l" id="slX-e8-VvT"/>
                                     <outlet property="petPhotoImageView" destination="5UC-dR-6kH" id="5Yf-fy-6il"/>
                                     <outlet property="petTypeLabel" destination="C2A-8T-6rQ" id="pFk-R5-IXN"/>
-                                    <segue destination="JyV-Cq-XKn" kind="show" identifier="PetDetail" id="b16-Az-fri"/>
+                                    <segue destination="Jps-us-ncA" kind="show" identifier="PetDetail" id="b16-Az-fri"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -295,6 +295,9 @@
                             <outlet property="delegate" destination="JyV-Cq-XKn" id="X22-XM-bb5"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="AjU-AY-9gA">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="R6q-7b-KRC"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="descDetailLabel" destination="euu-av-iEM" id="esQ-DP-vER"/>
                         <outlet property="imageDetailLabel" destination="2m0-n8-KqR" id="nYf-rP-SnE"/>
@@ -304,7 +307,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ld5-5E-ECg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1915" y="468"/>
+            <point key="canvasLocation" x="2727" y="468"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U6G-YK-mqI">
@@ -341,6 +344,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OdB-Oy-xpW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1199" y="-264"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CLZ-7T-599">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jps-us-ncA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gkz-Bz-R0q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JyV-Cq-XKn" kind="relationship" relationship="rootViewController" id="BYF-i5-mtx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vfg-72-1Rn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1915" y="468"/>
         </scene>
     </scenes>
     <resources>
