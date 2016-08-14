@@ -17,6 +17,17 @@ class PetViewController: UIViewController, UIImagePickerControllerDelegate, UINa
     
     var pet: Pet?
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if let pet = pet {
+            petPhotoImageVIew.image = pet.petPhoto
+            nameTextField.text = pet.petName
+            typeTextField.text = pet.petType
+            descTextField.text = pet.petDesc
+        }
+        
+    }
+    
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
         // Dismiss the picker if the user canceled.
         dismissViewControllerAnimated(true, completion: nil)
@@ -46,9 +57,18 @@ class PetViewController: UIViewController, UIImagePickerControllerDelegate, UINa
             pet = Pet(petName: name, petDesc: desc!, petType: type!, petPhoto: photo!)
         }
     }
-    @IBAction func cancel(sender: AnyObject) {
+    /*@IBAction func cancel(sender: AnyObject) {
+        print("tapped")
         dismissViewControllerAnimated(true, completion: nil)
+    }*/
+    @IBAction func cancel(sender: UIBarButtonItem) {
+        let isPresentingInAddMealMode = presentingViewController is UINavigationController
+        
+        if isPresentingInAddMealMode {
+            dismissViewControllerAnimated(true, completion: nil)
+        } else {
+            navigationController!.popViewControllerAnimated(true)
+        }
     }
-    
     
 }

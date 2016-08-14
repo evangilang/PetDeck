@@ -10,6 +10,7 @@ import UIKit
 
 class PetTableViewController: UITableViewController {
     var pets = [Pet]()
+    var pet: Pet?
     
     
     override func viewDidLoad() {
@@ -48,25 +49,31 @@ class PetTableViewController: UITableViewController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "PetDetail" {
-            let petDetailTableViewController = segue.destinationViewController as! PetDetailTableViewController
+            let destinationViewController = segue.destinationViewController as! PetViewController
             if let selectedPetCell = sender as? PetTableViewCell {
                 let indexPath = tableView.indexPathForCell(selectedPetCell)!
                 let selectedPet = pets[indexPath.row]
-                petDetailTableViewController.pet = selectedPet
+                destinationViewController.pet = selectedPet
                 
             }
+        } else if segue.identifier == "AddItem" {
+            print("adding item")
         }
     }
     
     @IBAction func unwindToPetList(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.sourceViewController as? PetViewController, pet = sourceViewController.pet {
+            if let selectedIndexPath = tableView.indexPathForSelectedRow {
+             pets[selectedIndexPath.row] = pet
+                tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
+            } else {
             let newIndexPath = NSIndexPath(forRow: pets.count, inSection: 0)
             pets.append(pet)
             tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
-            
+            }
         }
     }
-    
+
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
             pets.removeAtIndex(indexPath.row)
@@ -74,6 +81,6 @@ class PetTableViewController: UITableViewController {
         }
         //tableView.reloadData()
     }
-    
+
     
 }
