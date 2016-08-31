@@ -19,7 +19,7 @@
 
 /* Begin PBXFileReference section */
 		0830F4701D55CAE7000130FA /* PetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetViewController.swift; sourceTree = "<group>"; };
-		086E2A241D5449F600D751D8 /* Petopia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Petopia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		086E2A241D5449F600D751D8 /* PetDeck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetDeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		086E2A271D5449F600D751D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		086E2A2C1D5449F600D751D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		086E2A2E1D5449F600D751D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		086E2A251D5449F600D751D8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				086E2A241D5449F600D751D8 /* Petopia.app */,
+				086E2A241D5449F600D751D8 /* PetDeck.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,9 +76,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		086E2A231D5449F600D751D8 /* Petopia */ = {
+		086E2A231D5449F600D751D8 /* PetDeck */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 086E2A361D5449F600D751D8 /* Build configuration list for PBXNativeTarget "Petopia" */;
+			buildConfigurationList = 086E2A361D5449F600D751D8 /* Build configuration list for PBXNativeTarget "PetDeck" */;
 			buildPhases = (
 				086E2A201D5449F600D751D8 /* Sources */,
 				086E2A211D5449F600D751D8 /* Frameworks */,
@@ -88,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = Petopia;
+			name = PetDeck;
 			productName = Petopia;
-			productReference = 086E2A241D5449F600D751D8 /* Petopia.app */;
+			productReference = 086E2A241D5449F600D751D8 /* PetDeck.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -109,7 +109,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 086E2A1F1D5449F600D751D8 /* Build configuration list for PBXProject "Petopia" */;
+			buildConfigurationList = 086E2A1F1D5449F600D751D8 /* Build configuration list for PBXProject "PetDeck" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -122,7 +122,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				086E2A231D5449F600D751D8 /* Petopia */,
+				086E2A231D5449F600D751D8 /* PetDeck */,
 			);
 		};
 /* End PBXProject section */
@@ -267,7 +267,7 @@
 				INFOPLIST_FILE = Petopia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CodeLabs.Petopia;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PetDeck;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -281,7 +281,7 @@
 				INFOPLIST_FILE = Petopia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.CodeLabs.Petopia;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = PetDeck;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -289,7 +289,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		086E2A1F1D5449F600D751D8 /* Build configuration list for PBXProject "Petopia" */ = {
+		086E2A1F1D5449F600D751D8 /* Build configuration list for PBXProject "PetDeck" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				086E2A341D5449F600D751D8 /* Debug */,
@@ -298,7 +298,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		086E2A361D5449F600D751D8 /* Build configuration list for PBXNativeTarget "Petopia" */ = {
+		086E2A361D5449F600D751D8 /* Build configuration list for PBXNativeTarget "PetDeck" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				086E2A371D5449F600D751D8 /* Debug */,

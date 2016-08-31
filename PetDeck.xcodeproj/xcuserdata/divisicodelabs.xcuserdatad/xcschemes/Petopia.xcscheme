@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "086E2A231D5449F600D751D8"
-               BuildableName = "Petopia.app"
-               BlueprintName = "Petopia"
-               ReferencedContainer = "container:Petopia.xcodeproj">
+               BuildableName = "PetDeck.app"
+               BlueprintName = "PetDeck"
+               ReferencedContainer = "container:PetDeck.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "086E2A231D5449F600D751D8"
-            BuildableName = "Petopia.app"
-            BlueprintName = "Petopia"
-            ReferencedContainer = "container:Petopia.xcodeproj">
+            BuildableName = "PetDeck.app"
+            BlueprintName = "PetDeck"
+            ReferencedContainer = "container:PetDeck.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -56,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "086E2A231D5449F600D751D8"
-            BuildableName = "Petopia.app"
-            BlueprintName = "Petopia"
-            ReferencedContainer = "container:Petopia.xcodeproj">
+            BuildableName = "PetDeck.app"
+            BlueprintName = "PetDeck"
+            ReferencedContainer = "container:PetDeck.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -75,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "086E2A231D5449F600D751D8"
-            BuildableName = "Petopia.app"
-            BlueprintName = "Petopia"
-            ReferencedContainer = "container:Petopia.xcodeproj">
+            BuildableName = "PetDeck.app"
+            BlueprintName = "PetDeck"
+            ReferencedContainer = "container:PetDeck.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

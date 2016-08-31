@@ -10,7 +10,7 @@
         <!--Pet View Controller-->
         <scene sceneID="PEh-pP-6Cz">
             <objects>
-                <viewController id="jF3-3b-CpW" customClass="PetViewController" customModule="Petopia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jF3-3b-CpW" customClass="PetViewController" customModule="PetDeck" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yqy-SX-Bhg"/>
                         <viewControllerLayoutGuide type="bottom" id="fwf-BY-hP7"/>
@@ -95,16 +95,16 @@
             </objects>
             <point key="canvasLocation" x="2011" y="-264"/>
         </scene>
-        <!--PETOPIA-->
+        <!--PETDECK-->
         <scene sceneID="lu7-tz-bko">
             <objects>
-                <tableViewController id="n8g-6c-kCQ" customClass="PetTableViewController" customModule="Petopia" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="n8g-6c-kCQ" customClass="PetTableViewController" customModule="PetDeck" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="28" sectionFooterHeight="28" id="r3N-tm-nxn">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="76" id="hg7-Ah-Hh9" customClass="PetTableViewCell" customModule="Petopia" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="76" id="hg7-Ah-Hh9" customClass="PetTableViewCell" customModule="PetDeck" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="76"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hg7-Ah-Hh9" id="7Es-c0-40f">
@@ -166,7 +166,7 @@
                             <outlet property="delegate" destination="n8g-6c-kCQ" id="gwY-jX-NuY"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="PETOPIA" id="eFS-Ij-AP6">
+                    <navigationItem key="navigationItem" title="PETDECK" id="eFS-Ij-AP6">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="4KS-Xa-59l">
                             <connections>
                                 <segue destination="2we-mX-D2x" kind="show" identifier="AddItem" id="SVT-Xd-lmo"/>
@@ -219,6 +219,6 @@
         <image name="Image" width="540" height="540"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="59I-qy-nrx"/>
+        <segue reference="hrT-fG-A1g"/>
     </inferredMetricsTieBreakers>
 </document>
