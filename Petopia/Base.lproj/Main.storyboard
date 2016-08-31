@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -19,50 +18,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="iAd-VR-4J5">
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="iAd-VR-4J5">
                                 <rect key="frame" x="166" y="102" width="269" height="296"/>
                                 <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="269" id="3TQ-ws-t6o"/>
-                                    <constraint firstAttribute="height" constant="296" id="sP8-3K-Ug8"/>
-                                </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="bRa-Qv-ZgN" appends="YES" id="YhY-jd-Lhi"/>
                                 </connections>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TUf-Ay-b31">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TUf-Ay-b31">
                                 <rect key="frame" x="185" y="422" width="230" height="100"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pet Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JKZ-du-vOq">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pet Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JKZ-du-vOq">
                                         <rect key="frame" x="0.0" y="0.0" width="230" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pet Type(e.g Cat, Bird, Dog, etc)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="olu-lf-9X7">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pet Type(e.g Cat, Bird, Dog, etc)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="olu-lf-9X7">
                                         <rect key="frame" x="0.0" y="35" width="230" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pet Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qY8-vc-YUz">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pet Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qY8-vc-YUz">
                                         <rect key="frame" x="0.0" y="70" width="230" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="230" id="28G-FX-18U"/>
-                                    <constraint firstAttribute="width" secondItem="TUf-Ay-b31" secondAttribute="height" multiplier="23:10" id="KER-hV-00Q"/>
-                                    <constraint firstAttribute="height" constant="100" id="kgZ-2r-tKD"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="TUf-Ay-b31" firstAttribute="centerX" secondItem="yK6-oF-dVc" secondAttribute="centerX" id="0fz-OF-MZx"/>
-                            <constraint firstItem="iAd-VR-4J5" firstAttribute="centerX" secondItem="TUf-Ay-b31" secondAttribute="centerX" id="COs-3s-kBL"/>
-                            <constraint firstItem="iAd-VR-4J5" firstAttribute="top" secondItem="Yqy-SX-Bhg" secondAttribute="bottom" constant="38" id="Hn3-n1-rwd"/>
-                            <constraint firstItem="TUf-Ay-b31" firstAttribute="top" secondItem="iAd-VR-4J5" secondAttribute="bottom" constant="24" id="kaY-cv-F14"/>
-                            <constraint firstItem="iAd-VR-4J5" firstAttribute="centerX" secondItem="yK6-oF-dVc" secondAttribute="centerX" id="ncc-Mi-ncq"/>
+                            <constraint firstItem="iAd-VR-4J5" firstAttribute="top" secondItem="Yqy-SX-Bhg" secondAttribute="bottom" id="Cr4-XP-A0d"/>
+                            <constraint firstItem="TUf-Ay-b31" firstAttribute="top" secondItem="iAd-VR-4J5" secondAttribute="bottom" constant="24" id="dhL-hA-0wK"/>
+                            <constraint firstItem="iAd-VR-4J5" firstAttribute="leading" secondItem="yK6-oF-dVc" secondAttribute="leading" id="n1B-0h-ZCD"/>
+                            <constraint firstAttribute="trailing" secondItem="iAd-VR-4J5" secondAttribute="trailing" id="nfi-RR-d1W"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oJ4-gE-BdF">

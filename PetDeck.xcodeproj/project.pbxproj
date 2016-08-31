@@ -44,7 +44,7 @@
 		086E2A1B1D5449F600D751D8 = {
 			isa = PBXGroup;
 			children = (
-				086E2A261D5449F600D751D8 /* Petopia */,
+				086E2A261D5449F600D751D8 /* PetDeck */,
 				086E2A251D5449F600D751D8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,7 +57,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		086E2A261D5449F600D751D8 /* Petopia */ = {
+		086E2A261D5449F600D751D8 /* PetDeck */ = {
 			isa = PBXGroup;
 			children = (
 				086E2A271D5449F600D751D8 /* AppDelegate.swift */,
@@ -70,6 +70,7 @@
 				086E2A3D1D546F3100D751D8 /* PetTableViewCell.swift */,
 				0830F4701D55CAE7000130FA /* PetViewController.swift */,
 			);
+			name = PetDeck;
 			path = Petopia;
 			sourceTree = "<group>";
 		};

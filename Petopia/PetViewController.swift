@@ -62,9 +62,9 @@ class PetViewController: UIViewController, UIImagePickerControllerDelegate, UINa
         dismissViewControllerAnimated(true, completion: nil)
     }*/
     @IBAction func cancel(sender: UIBarButtonItem) {
-        let isPresentingInAddMealMode = presentingViewController is UINavigationController
+        let isPresentingInAddPetMode = presentingViewController is UINavigationController
         
-        if isPresentingInAddMealMode {
+        if isPresentingInAddPetMode {
             dismissViewControllerAnimated(true, completion: nil)
         } else {
             navigationController!.popViewControllerAnimated(true)
