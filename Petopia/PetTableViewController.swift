@@ -19,7 +19,7 @@ class PetTableViewController: UITableViewController {
     }
     
     func loadPets(){
-        let petPhoto1 = UIImage(named: "GingerCat")
+        let petPhoto1 = UIImage(named: "tabby")
         let pet1 = Pet(petName: "Inci", petDesc: "Kucing pemalas", petType: "Cat", petPhoto: petPhoto1!)
         
         let petPhoto2 = UIImage(named: "bird3")

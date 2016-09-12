@@ -15,43 +15,101 @@
                         <viewControllerLayoutGuide type="bottom" id="fwf-BY-hP7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yK6-oF-dVc">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="340" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="iAd-VR-4J5">
-                                <rect key="frame" x="166" y="102" width="269" height="296"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="bRa-Qv-ZgN" appends="YES" id="YhY-jd-Lhi"/>
-                                </connections>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TUf-Ay-b31">
-                                <rect key="frame" x="185" y="422" width="230" height="100"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PdH-OR-Iyb">
+                                <rect key="frame" x="0.0" y="64" width="340" height="736"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pet Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JKZ-du-vOq">
-                                        <rect key="frame" x="0.0" y="0.0" width="230" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pet Type(e.g Cat, Bird, Dog, etc)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="olu-lf-9X7">
-                                        <rect key="frame" x="0.0" y="35" width="230" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pet Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qY8-vc-YUz">
-                                        <rect key="frame" x="0.0" y="70" width="230" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6fE-Vf-ymL" userLabel="Container View">
+                                        <rect key="frame" x="0.0" y="0.0" width="340" height="500"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="iAd-VR-4J5">
+                                                <rect key="frame" x="0.0" y="0.0" width="340" height="200"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="EOp-J2-GzE"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="bRa-Qv-ZgN" appends="YES" id="YhY-jd-Lhi"/>
+                                                </connections>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="hAR-0d-16B">
+                                                <rect key="frame" x="55" y="240" width="230" height="108"/>
+                                                <subviews>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pet Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JKZ-du-vOq">
+                                                        <rect key="frame" x="0.0" y="0.0" width="230" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="jF3-3b-CpW" id="LvJ-uB-xct"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pet Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qY8-vc-YUz">
+                                                        <rect key="frame" x="0.0" y="39" width="230" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="jF3-3b-CpW" id="VXM-C2-oHP"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pet Type(e.g Cat, Bird, Dog, etc)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="olu-lf-9X7">
+                                                        <rect key="frame" x="0.0" y="78" width="230" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="jF3-3b-CpW" id="bJ3-vW-rXz"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="kOz-Zp-myP">
+                                                <rect key="frame" x="276" y="0.0" width="76" height="40"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="76" id="grK-8x-fNU"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="ABy-uQ-heK" appends="YES" id="pgF-xO-k4s"/>
+                                                </connections>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstItem="iAd-VR-4J5" firstAttribute="top" secondItem="6fE-Vf-ymL" secondAttribute="top" id="0pM-hI-Gox"/>
+                                            <constraint firstItem="hAR-0d-16B" firstAttribute="leading" secondItem="6fE-Vf-ymL" secondAttribute="leading" constant="55" id="5Nk-1y-SUX"/>
+                                            <constraint firstItem="kOz-Zp-myP" firstAttribute="top" secondItem="iAd-VR-4J5" secondAttribute="bottom" constant="-200" id="67s-7u-ApB"/>
+                                            <constraint firstAttribute="height" constant="500" id="HaJ-CD-j7y"/>
+                                            <constraint firstItem="hAR-0d-16B" firstAttribute="top" secondItem="iAd-VR-4J5" secondAttribute="bottom" constant="40" id="Uck-WM-OYh"/>
+                                            <constraint firstAttribute="trailing" secondItem="iAd-VR-4J5" secondAttribute="trailing" id="VUs-nW-rGa"/>
+                                            <constraint firstAttribute="trailing" secondItem="kOz-Zp-myP" secondAttribute="trailing" constant="-12" id="bJ6-0D-bQq"/>
+                                            <constraint firstItem="hAR-0d-16B" firstAttribute="top" secondItem="kOz-Zp-myP" secondAttribute="bottom" constant="200" id="fdu-iE-slp"/>
+                                            <constraint firstItem="hAR-0d-16B" firstAttribute="centerX" secondItem="iAd-VR-4J5" secondAttribute="centerX" id="hRQ-Gb-lgM"/>
+                                            <constraint firstAttribute="trailing" secondItem="hAR-0d-16B" secondAttribute="trailing" constant="55" id="mE7-TY-Fz7"/>
+                                            <constraint firstItem="iAd-VR-4J5" firstAttribute="leading" secondItem="6fE-Vf-ymL" secondAttribute="leading" id="uUV-WT-AcR"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                            </stackView>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="6fE-Vf-ymL" firstAttribute="leading" secondItem="PdH-OR-Iyb" secondAttribute="leading" id="2l9-Ux-LNq"/>
+                                    <constraint firstItem="6fE-Vf-ymL" firstAttribute="top" secondItem="PdH-OR-Iyb" secondAttribute="top" id="Y54-wj-oKI"/>
+                                    <constraint firstAttribute="trailing" secondItem="6fE-Vf-ymL" secondAttribute="trailing" id="bUa-pZ-yYO"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="0XI-ZL-jOd" appends="YES" id="rHB-kQ-AeZ"/>
+                                </connections>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="iAd-VR-4J5" firstAttribute="top" secondItem="Yqy-SX-Bhg" secondAttribute="bottom" id="Cr4-XP-A0d"/>
-                            <constraint firstItem="TUf-Ay-b31" firstAttribute="top" secondItem="iAd-VR-4J5" secondAttribute="bottom" constant="24" id="dhL-hA-0wK"/>
-                            <constraint firstItem="iAd-VR-4J5" firstAttribute="leading" secondItem="yK6-oF-dVc" secondAttribute="leading" id="n1B-0h-ZCD"/>
-                            <constraint firstAttribute="trailing" secondItem="iAd-VR-4J5" secondAttribute="trailing" id="nfi-RR-d1W"/>
+                            <constraint firstItem="PdH-OR-Iyb" firstAttribute="leading" secondItem="yK6-oF-dVc" secondAttribute="leading" id="Ab1-Yz-Pda"/>
+                            <constraint firstItem="PdH-OR-Iyb" firstAttribute="top" secondItem="Yqy-SX-Bhg" secondAttribute="bottom" id="XgH-Qn-ajy"/>
+                            <constraint firstAttribute="trailing" secondItem="PdH-OR-Iyb" secondAttribute="trailing" id="fA1-ON-UrX"/>
+                            <constraint firstItem="iAd-VR-4J5" firstAttribute="width" secondItem="yK6-oF-dVc" secondAttribute="width" id="r5e-RM-vGb"/>
+                            <constraint firstItem="fwf-BY-hP7" firstAttribute="top" secondItem="PdH-OR-Iyb" secondAttribute="bottom" id="sUp-Pc-Xnh"/>
+                            <constraint firstItem="6fE-Vf-ymL" firstAttribute="width" secondItem="yK6-oF-dVc" secondAttribute="width" id="wWP-AG-ChK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oJ4-gE-BdF">
@@ -66,23 +124,50 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="340" height="800"/>
                     <connections>
                         <outlet property="descTextField" destination="qY8-vc-YUz" id="ylM-vm-fOt"/>
                         <outlet property="nameTextField" destination="JKZ-du-vOq" id="I8t-WA-H6r"/>
                         <outlet property="petPhotoImageVIew" destination="iAd-VR-4J5" id="YMH-2D-FwH"/>
                         <outlet property="saveBarButton" destination="OLW-Gw-NaG" id="OpK-iX-EEG"/>
+                        <outlet property="scrollView" destination="PdH-OR-Iyb" id="fOM-f5-s8P"/>
                         <outlet property="typeTextField" destination="olu-lf-9X7" id="aAp-wR-2VP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CVb-kB-3SN" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="FjU-cx-5lL" userLabel="Exit" sceneMemberID="exit"/>
-                <tapGestureRecognizer id="bRa-Qv-ZgN">
+                <tapGestureRecognizer id="bRa-Qv-ZgN"/>
+                <tapGestureRecognizer id="ABy-uQ-heK">
                     <connections>
-                        <action selector="selectImagePicker:" destination="jF3-3b-CpW" id="jEp-E4-Fvu"/>
+                        <action selector="selectImagePicker:" destination="jF3-3b-CpW" id="JqA-I2-Bks"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="0XI-ZL-jOd">
+                    <connections>
+                        <action selector="hideKeyboard:" destination="jF3-3b-CpW" id="3Bs-YK-iGF"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2011" y="-264"/>
+            <point key="canvasLocation" x="2072" y="-78"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LGn-a2-OKB">
+            <objects>
+                <viewController id="dkC-AK-NtV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vPG-Bs-cCy"/>
+                        <viewControllerLayoutGuide type="bottom" id="ywN-05-gmw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jIP-nV-v2H">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CD5-v5-bma" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2107" y="-831"/>
         </scene>
         <!--PETDECK-->
         <scene sceneID="lu7-tz-bko">
@@ -206,6 +291,7 @@
     </scenes>
     <resources>
         <image name="Image" width="540" height="540"/>
+        <image name="camera" width="81" height="81"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="hrT-fG-A1g"/>
